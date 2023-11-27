@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using ProniaLastTry.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace ProniaLastTry.Areas.Admin.ViewModels
 {
@@ -18,5 +19,12 @@ namespace ProniaLastTry.Areas.Admin.ViewModels
         public string Description { get; set; }
         [Required(ErrorMessage = "Please add a category label!")]
         public int? CategoryId { get; set; }
+        public List<Category>? Categories { get; set; }
+        public List<int> TagIds { get; set; }
+        public List<Tag>? Tags { get; set; }
+        public List<int> SizeIds { get; set; }
+        public List<Size>? Sizes { get; set; }
+        public List<int> ColorIds { get; set; }
+        public List<Color>? Colors { get; set; }
     }
 }
